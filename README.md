@@ -358,7 +358,7 @@ function inside the `map` to access the color values needed:
 makeColorSwatches = () => (
   ["#F00", "#F80", "#FF0", "#0F0", "#00F", "#508", "#90D", "#FFF", "#000"].map((str, idx) => {
     let callback = () => this.props.setSelectedColor(str)
-    return <div onClick={callback} key={idx} className="color-swatch" style={{backgroundColor: str}}/>
+    return <div onClick={()=> this.props.setSelectedColor(str)} key={idx} className="color-swatch" style={{backgroundColor: str}}/>
   })
 )
 ...
